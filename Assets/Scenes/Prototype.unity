@@ -189,7 +189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105439387}
-  m_LocalRotation: {x: 0.054788187, y: 0.000000017180538, z: -9.427062e-10, w: 0.998498}
+  m_LocalRotation: {x: 0.054788187, y: -0.000000017180538, z: 9.427062e-10, w: 0.998498}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4776,7 +4776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 774660541}
+  cam: {fileID: 793749063}
   speed: 10
+  turnSmoothTime: 0.1
 --- !u!143 &774660541
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4872,7 +4874,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793749060}
-  m_LocalRotation: {x: 0.054788187, y: 0.000000034361076, z: -0.0000000018854132, w: 0.998498}
+  m_LocalRotation: {x: 0.054788187, y: -0.000000034361076, z: 0.0000000018854132, w: 0.998498}
   m_LocalPosition: {x: 0, y: 4.5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
