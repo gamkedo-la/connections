@@ -17,9 +17,9 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 937
+    x: 614
     y: -190
-    width: 428
+    width: 751
     height: 2218
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -1876,7 +1876,7 @@ MonoBehaviour:
   AlphaComposition: 0
   SampleMode: 0
   Mode: 1
-  ColorMode: 1
+  ColorMode: 2
   channels: 6
 --- !u!114 &8926484042661614640
 MonoBehaviour:
