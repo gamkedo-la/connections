@@ -27,7 +27,6 @@ public class ActivateTrail : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             trail.SetActive(false);
-
         }
 
     }
