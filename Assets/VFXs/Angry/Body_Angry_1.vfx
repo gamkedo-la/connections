@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Body_Happy
+  m_Name: Body_Angry_1
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -59,7 +59,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Body_Happy
+  m_Name: Body_Angry_1
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -1281,7 +1281,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":0.8891499638557434,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":0.29382288455963137,"g":1.0,"b":0.24313724040985108,"a":1.0},"time":0.24118410050868989},{"color":{"r":0.0,"g":1.0,"b":0.5793955326080322,"a":1.0},"time":0.5176470875740051},{"color":{"r":0.9177910089492798,"g":1.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.052948806434869769},{"alpha":1.0,"time":0.800000011920929},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":0.018452025949954988,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":0.04746895283460617,"b":0.0,"a":1.0},"time":0.24118410050868989},{"color":{"r":1.0,"g":0.3810223937034607,"b":0.0,"a":1.0},"time":0.5176470875740051},{"color":{"r":1.0,"g":0.09962938725948334,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.052948806434869769},{"alpha":1.0,"time":0.800000011920929},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color
