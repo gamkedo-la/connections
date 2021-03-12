@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Particles
+    uniqueID: 1561992223
+    locked: 0
+  - name: Grass
+    uniqueID: 3448021611
+    locked: 0
