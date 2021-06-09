@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Convergence Air
+  m_Name: Convergence Air Faster and 10 mil
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_ImportDependencies: []
   m_GraphVersion: 6
   m_ResourceVersion: 1
-  m_saved: 0
+  m_saved: 1
   m_SubgraphDependencies: []
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
@@ -81,7 +81,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Convergence Air
+  m_Name: Convergence Air Faster and 10 mil
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 99999
+      m_SerializableObject: 20000
     m_Space: 2147483647
   m_Property:
     name: Rate
@@ -275,7 +275,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 5
+      m_SerializableObject: 8
     m_Space: 2147483647
   m_Property:
     name: A
@@ -649,7 +649,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614720}
   - {fileID: 8926484042661614721}
   dataType: 0
-  capacity: 9999999
+  capacity: 50000
   stripCapacity: 16
   particlePerStripCount: 16
   m_Space: 1
@@ -5363,7 +5363,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.9681532382965088,"g":1.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.6273245215415955,"b":0.6886792182922363,"a":1.0},"time":0.502937376499176},{"color":{"r":0.0,"g":0.7452830076217651,"b":0.0382186621427536,"a":1.0},"time":0.8411840796470642}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":0.8867707252502441,"time":0.06764324754476547},{"alpha":1.0,"time":0.15588617324829102},{"alpha":1.0,"time":0.7411764860153198},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.9681532382965088,"g":1.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.6273245215415955,"b":0.6886792182922363,"a":1.0},"time":0.6088197231292725},{"color":{"r":0.0,"g":0.7452830076217651,"b":0.0382186621427536,"a":1.0},"time":0.8411840796470642}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":0.8867707252502441,"time":0.06764324754476547},{"alpha":1.0,"time":0.382360577583313},{"alpha":1.0,"time":0.7411764860153198},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: 
@@ -5518,7 +5518,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.8927487134933472,"value":5.449368000030518,"inTangent":-1.0377663373947144,"outTangent":-1.0377663373947144,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":4.4559173583984379,"value":0.075958251953125,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.8791683912277222,"value":1.2796788215637208,"inTangent":0.02958807535469532,"outTangent":0.02958807535469532,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":4.4559173583984379,"value":0.075958251953125,"inTangent":0.0,"outTangent":0.0,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: 2147483647
   m_Property:
     name: 
