@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59838040}
   - component: {fileID: 59838041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 108694546}
   - component: {fileID: 108694545}
   - component: {fileID: 108694544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 112704334}
   - component: {fileID: 112704336}
   - component: {fileID: 112704335}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1060,7 +1060,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179669054}
-  m_LocalRotation: {x: 0.21201204, y: 1.7527572e-10, z: 3.820627e-11, w: 0.9772671}
+  m_LocalRotation: {x: 0.21201202, y: -1.9688585e-10, z: -4.2891524e-11, w: 0.9772671}
   m_LocalPosition: {x: -1.571, y: 3.6399999, z: -1.9190001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1235,7 +1235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 181779617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 191809781}
   - component: {fileID: 191809780}
   - component: {fileID: 191809779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orbiting Motes
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1909,7 +1909,7 @@ GameObject:
   - component: {fileID: 255623991}
   - component: {fileID: 255623994}
   - component: {fileID: 255623993}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 319411510}
   - component: {fileID: 319411512}
   - component: {fileID: 319411511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2597,7 +2597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 415455626}
   - component: {fileID: 415455625}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6422,7 +6422,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55848
+  m_Name: pb_Mesh27240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6808,7 +6808,7 @@ GameObject:
   - component: {fileID: 546495072}
   - component: {fileID: 546495074}
   - component: {fileID: 546495073}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7148,7 +7148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561901637}
   - component: {fileID: 561901638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7366,7 +7366,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.8353765, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -7820,7 +7820,7 @@ GameObject:
   - component: {fileID: 718923386}
   - component: {fileID: 718923388}
   - component: {fileID: 718923387}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8056,7 +8056,8 @@ GameObject:
   - component: {fileID: 774660540}
   - component: {fileID: 774660542}
   - component: {fileID: 774660543}
-  m_Layer: 0
+  - component: {fileID: 774660544}
+  m_Layer: 3
   m_Name: Third Person Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8077,6 +8078,7 @@ Transform:
   m_Children:
   - {fileID: 415455626}
   - {fileID: 561901637}
+  - {fileID: 2087581019}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8143,6 +8145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPosition: {x: 0, y: 0, z: 0}
   trails: {fileID: 1424105152}
+--- !u!114 &774660544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774660538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001d99e2a0de804caa9f1e5235e386d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &785793761
 GameObject:
   m_ObjectHideFlags: 0
@@ -8554,7 +8568,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820565929}
-  m_Layer: 0
+  - component: {fileID: 820565930}
+  - component: {fileID: 820565931}
+  m_Layer: 7
   m_Name: TPSMUDBALL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8578,6 +8594,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820565930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820565928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54173ce77dcb6b41ad105e0631a15f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &820565931
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820565928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.85
+  m_Center: {x: 0, y: -0.4, z: 0}
 --- !u!1 &823895228
 GameObject:
   m_ObjectHideFlags: 0
@@ -8708,7 +8749,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55818
+  m_Name: pb_Mesh27200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8975,7 +9016,7 @@ GameObject:
   - component: {fileID: 1025027045}
   - component: {fileID: 1025027044}
   - component: {fileID: 1025027043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9988,7 +10029,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55476
+  m_Name: pb_Mesh26790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10191,7 +10232,7 @@ GameObject:
   - component: {fileID: 1398282979}
   - component: {fileID: 1398282978}
   - component: {fileID: 1398282977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10289,7 +10330,7 @@ GameObject:
   - component: {fileID: 1424105154}
   - component: {fileID: 1424105153}
   - component: {fileID: 1424105156}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10538,7 +10579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481559602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11242,7 +11283,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55554
+  m_Name: pb_Mesh26876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17843,7 +17884,7 @@ GameObject:
   - component: {fileID: 1846539652}
   - component: {fileID: 1846539651}
   - component: {fileID: 1846539650}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Orbiting Motes
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -18122,7 +18163,7 @@ GameObject:
   - component: {fileID: 1895587575}
   - component: {fileID: 1895587577}
   - component: {fileID: 1895587576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -18470,7 +18511,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.8353765, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -18555,7 +18596,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.8353765, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -18578,7 +18619,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984280716}
-  m_LocalRotation: {x: 0.19424808, y: -0.000000008439323, z: 0.0000000016711535, w: 0.98095244}
+  m_LocalRotation: {x: 0.19424808, y: 0.0000000084393195, z: -0.0000000016711529, w: 0.98095244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18640,7 +18681,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.8353765, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -18663,7 +18704,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988069873}
-  m_LocalRotation: {x: 0.21201201, y: -0, z: -0, w: 0.9772671}
+  m_LocalRotation: {x: 0.212012, y: -0, z: -0, w: 0.9772671}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18858,7 +18899,7 @@ GameObject:
   - component: {fileID: 2066670961}
   - component: {fileID: 2066670963}
   - component: {fileID: 2066670962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18930,6 +18971,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066670960}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2087581018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087581019}
+  - component: {fileID: 2087581021}
+  - component: {fileID: 2087581020}
+  m_Layer: 3
+  m_Name: Hit Area Visualization (Not Funcational)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2087581019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087581018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 774660539}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2087581020
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087581018}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2087581021
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087581018}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2102199655
 GameObject:
   m_ObjectHideFlags: 0
@@ -18940,7 +19064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102199656}
   - component: {fileID: 2102199657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Animator (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

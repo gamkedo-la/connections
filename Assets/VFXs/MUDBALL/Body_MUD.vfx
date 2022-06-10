@@ -20,7 +20,7 @@ MonoBehaviour:
     x: -824
     y: -421
     width: 1021
-    height: 2658
+    height: 2295
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,7 +527,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 1000
+  capacity: 2000
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614589}
   - {fileID: 8926484042661614591}
   - {fileID: 8926484042661614593}
-  m_UIPosition: {x: -602, y: 1694}
+  m_UIPosition: {x: -600, y: 1331}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
