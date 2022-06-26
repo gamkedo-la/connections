@@ -7,10 +7,11 @@ public class ParticleTranferState : MonoBehaviour
     public enum TransferMode { Off, StartTransfer, OrbitingMotesOn, BlastActive, LingeringParticles };
     private TransferMode currentMode = TransferMode.Off;
     public TransferMode nextMode = TransferMode.Off;
-    // Start is called before the first frame update
-    void Start()
+
+    public void ChangeStateTo(TransferMode toState)
     {
-        
+        //if we need to, we can prevent incorrect transitions
+        nextMode = toState;    
     }
 
     // Update is called once per frame
