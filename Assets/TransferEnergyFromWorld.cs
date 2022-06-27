@@ -6,12 +6,15 @@ public class TransferEnergyFromWorld : MonoBehaviour
 {
     public float timeUntilEnd;
     public bool timerOn = false;
-    public GameObject hero; 
+    public GameObject hero;
+    public GameObject yellowOrbitingMotes;
       
 
     void Start()
     {
         hero = GameObject.Find("Third Person Player/Particle Transfer Manager");
+        yellowOrbitingMotes = GameObject.Find("Third Person Player/GFX/YellowOrbiting Motes");
+        yellowOrbitingMotes.SetActive(false);
         ParticleTranferState ptsScript = hero.GetComponentInChildren<ParticleTranferState>();
     }
     void Update()
@@ -31,6 +34,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
                 if (ptsScript)
                 {
                     ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.StopTransfer);
+                    yellowOrbitingMotes.SetActive(true);
                 }
                 else
                 {
