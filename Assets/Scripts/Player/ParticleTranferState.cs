@@ -5,7 +5,7 @@ using UnityEngine.VFX;
 
 public class ParticleTranferState : MonoBehaviour
 {
-    public enum TransferMode { Off, StartTransfer, OrbitingMotesOn, BlastActive, LingeringParticles };
+    public enum TransferMode { Off, StartTransfer, StopTransfer, OrbitingMotesOn, BlastActive, LingeringParticles };
     private TransferMode currentMode = TransferMode.Off;
     public TransferMode nextMode = TransferMode.Off;
     public VisualEffect worldTreeTransfer;
@@ -27,7 +27,10 @@ public class ParticleTranferState : MonoBehaviour
                     break;
                 case TransferMode.StartTransfer:
                     worldTreeTransfer.SendEvent("StartEffect");
-                    break;            
+                    break;
+                case TransferMode.StopTransfer:
+                    worldTreeTransfer.SendEvent("StopEffect");
+                    break;
                 case TransferMode.OrbitingMotesOn:
                     break;
                 case TransferMode.BlastActive:
