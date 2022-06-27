@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class ParticleTranferState : MonoBehaviour
 {
     public enum TransferMode { Off, StartTransfer, OrbitingMotesOn, BlastActive, LingeringParticles };
     private TransferMode currentMode = TransferMode.Off;
     public TransferMode nextMode = TransferMode.Off;
+    public VisualEffect worldTreeTransfer;
 
     public void ChangeStateTo(TransferMode toState)
     {
@@ -24,7 +26,8 @@ public class ParticleTranferState : MonoBehaviour
                 case TransferMode.Off:
                     break;
                 case TransferMode.StartTransfer:
-                    break;
+                    worldTreeTransfer.SendEvent("StartEffect");
+                    break;            
                 case TransferMode.OrbitingMotesOn:
                     break;
                 case TransferMode.BlastActive:
