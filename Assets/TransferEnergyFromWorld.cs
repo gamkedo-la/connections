@@ -16,6 +16,9 @@ public class TransferEnergyFromWorld : MonoBehaviour
     public int explosionforce;
     public VFXExposedProperty exposed;
     public string explosionVFXString;
+    public bool ExplodeTimer;
+    public float timeUntilBlastOff;
+
 
     void Start()
     {
@@ -61,9 +64,9 @@ public class TransferEnergyFromWorld : MonoBehaviour
         if (explodeTimerOn)
         {
             explosion.SetActive(true);
-            explosionVFX.SetInt(explosionVFXString, 2);
+            explosionVFX.SetInt(explosionVFXString, 3);
             ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
-            ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastGather);
+            ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.StopTransfer);            
             if (timeUntilExplode > 0)
             {
                 timeUntilExplode -= Time.deltaTime;
@@ -71,10 +74,13 @@ public class TransferEnergyFromWorld : MonoBehaviour
             else
             {
                 Debug.Log("Time is Up for Explode!");
-                explosionVFX.SetInt(explosionVFXString, -2);
+                ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastGather);
+                explosionVFX.SetInt(explosionVFXString, -4);
                 timeUntilExplode = 0;
                 timerOn = false;
-
+                explodeTimerOn = false;
+                ExplodeTimer = true;                
+                
                 //ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
                 if (ptsScript)
                 {
@@ -86,6 +92,23 @@ public class TransferEnergyFromWorld : MonoBehaviour
                     Debug.LogWarning("ParticleTransferBlastExplode not found on player");
                 }
             }
+        }
+        if (ExplodeTimer)
+        {
+            ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
+            if(timeUntilBlastOff > 0)
+            {
+                timeUntilBlastOff -= Time.deltaTime;
+            }
+            else
+            {
+                ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastExplode);
+                if (ptsScript)
+                {
+                    ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastExplode);
+                }
+            }
+
         }
     }
 

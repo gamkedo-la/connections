@@ -9,6 +9,7 @@ public class ParticleTranferState : MonoBehaviour
     private TransferMode currentMode = TransferMode.Off;
     public TransferMode nextMode = TransferMode.Off;
     public VisualEffect worldTreeTransfer;
+    public VisualEffect worldTreeExplosion;
 
     public void ChangeStateTo(TransferMode toState)
     {
@@ -34,10 +35,10 @@ public class ParticleTranferState : MonoBehaviour
                 //case TransferMode.OrbitingMotesOn:
                     //break;
                 case TransferMode.BlastGather:
-                    worldTreeTransfer.SendEvent("StartExplosion");
+                    worldTreeExplosion.SendEvent("StartExplosion");
                     break;
                 case TransferMode.BlastExplode:
-                    worldTreeTransfer.SendEvent("StopExplosion");
+                    worldTreeExplosion.SendEvent("StopExplosion");
                     break;
                 case TransferMode.LingeringParticles:
                     break;
