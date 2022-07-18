@@ -9,23 +9,26 @@ Shader "Grass/GrassGeometryShader"
     }
     SubShader
     {
-        Tags {  "Queue" = "AlphaTest" 
-                "RenderType"="TransparentCutout" 
-                "IgnoreProjector" = "True"  }
+        Cull Off
+        AlphaToMask On
+			Tags{ "Queue" = "AlphaTest" "RenderType" = "TransparentCutout" "IgnoreProjector" = "True" }
 
         Pass
         {
+            
+            AlphaToMask On // Enable alpha-to-coverage mode for this SubShader
             Cull Off
-            // Tags{ "LightMode" = "ForwardBase" }
-            AlphaToMask On
+			// Tags{ "LightMode" = "ForwardBase" }
+			
+            // Blend SrcAlpha OneMinusSrcAlpha // supposed to enable transparency, but for other renderers???
 
             CGPROGRAM
 
+            #include "UnityCG.cginc"
             #pragma vertex vert
             #pragma fragment frag
             #pragma geometry geom
-
-            #include "UnityCG.cginc"
+            // #include "UnityLightingCommon.cginc"
 
             // targets specific graphics API library
             // check: https://docs.unity3d.com/Manual/SL-ShaderCompileTargets.html
@@ -126,35 +129,36 @@ Shader "Grass/GrassGeometryShader"
                     }
 
                     // I need to check how this whole wind section works
-                    float2 wind = float2(sin(_Time.x * UNITY_PI * 5), sin(_Time.x * UNITY_PI * 5));
-                    wind.x += (sin(_Time.x + root.x / 25) + sin((_Time.x + root.x / 15) + 50)) * 0.5;
-                    wind.y += cos(_Time.x + root.z / 80);
-                    wind *= lerp(0.7, 1.0, 1.0 - random);
+                    // === WIND RELATED CODE ===
+                    // float2 wind = float2(sin(_Time.x * UNITY_PI * 5), sin(_Time.x * UNITY_PI * 5));
+                    // wind.x += (sin(_Time.x + root.x / 25) + sin((_Time.x + root.x / 15) + 50)) * 0.5;
+                    // wind.y += cos(_Time.x + root.z / 80);
+                    // wind *= lerp(0.7, 1.0, 1.0 - random);
 
-                    float oscillationStrength = 2.5f;
-                    float sinSkewCoeff = random;
-                    float lerpCoeff = (sin(oscillationStrength * _Time.x + sinSkewCoeff) + 1.0) / 2;
-                    float2 leftWindBound = wind * (1.0 - oscillateDelta);
-                    float2 rightWindBound = wind * (1.0 + oscillateDelta);
+                    // float oscillationStrength = 2.5f;
+                    // float sinSkewCoeff = random;
+                    // float lerpCoeff = (sin(oscillationStrength * _Time.x + sinSkewCoeff) + 1.0) / 2;
+                    // float2 leftWindBound = wind * (1.0 - oscillateDelta);
+                    // float2 rightWindBound = wind * (1.0 + oscillateDelta);
 
-                    wind = lerp(leftWindBound, rightWindBound, lerpCoeff);
+                    // wind = lerp(leftWindBound, rightWindBound, lerpCoeff);
 
-                    float randomAngle = lerp(-UNITY_PI, UNITY_PI, random);
-                    float randomMagnitude = lerp(0, 1., random);
-                    float2 randomWindDir = float2(sin(randomAngle), cos(randomAngle));
-                    wind += randomWindDir * randomMagnitude;
+                    // float randomAngle = lerp(-UNITY_PI, UNITY_PI, random);
+                    // float randomMagnitude = lerp(0, 1., random);
+                    // float2 randomWindDir = float2(sin(randomAngle), cos(randomAngle));
+                    // wind += randomWindDir * randomMagnitude;
 
-                    float windForce = length(wind);
+                    // float windForce = length(wind);
 
-                    v[i].pos.xz += wind.xy * windCoEff;
-                    v[i].pos.y -= windForce * windCoEff * 0.8;
+                    // v[i].pos.xz += wind.xy * windCoEff;
+                    // v[i].pos.y -= windForce * windCoEff * 0.8;
 
                     v[i].pos = UnityObjectToClipPos(v[i].pos);
 
-                    if (fmod(i, 2) == 1) {
+                    // if (fmod(i, 2) == 1) {
 
-                        windCoEff += offsetV;
-                    }
+                    //     windCoEff += offsetV;
+                    // }
 
                 }
 

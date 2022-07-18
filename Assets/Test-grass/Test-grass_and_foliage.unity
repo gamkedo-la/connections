@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -495,8 +495,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642368325}
-  m_LocalRotation: {x: -0.22859195, y: -0.40050995, z: 0.10389215, w: -0.88121736}
-  m_LocalPosition: {x: 43.814194, y: 44.27911, z: 44.23338}
+  m_LocalRotation: {x: 0.12993278, y: 0.12753606, z: -0.01685302, w: 0.98314196}
+  m_LocalPosition: {x: 132.06561, y: 8.805725, z: 133.38126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -659,8 +659,8 @@ MonoBehaviour:
   heightMap: {fileID: 2800000, guid: 6c92cf2815630f34dbcd4d2a72eb6da5, type: 3}
   terrainHeight: 10
   terrainSize: 250
-  terrainMat: {fileID: 0}
-  grassMat: {fileID: 0}
+  terrainMat: {fileID: 2100000, guid: b4a432f288e60b040866b8e8ace4270f, type: 2}
+  grassMat: {fileID: 2100000, guid: b549f71f1cb5dd048800598cc4c509bb, type: 2}
 --- !u!4 &1861288661
 Transform:
   m_ObjectHideFlags: 0
