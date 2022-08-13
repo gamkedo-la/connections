@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
+
 public class TransferEnergyFromWorld : MonoBehaviour
 {
     public float timeUntilEnd;
@@ -37,9 +38,9 @@ public class TransferEnergyFromWorld : MonoBehaviour
     }
     void Update()
     {
-       if(timerOn)
+        if (timerOn)
         {
-            if(timeUntilEnd > 0)
+            if (timeUntilEnd > 0)
             {
                 timeUntilEnd -= Time.deltaTime;
             }
@@ -66,7 +67,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
             explosion.SetActive(true);
             explosionVFX.SetInt(explosionVFXString, 3);
             ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
-            ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.StopTransfer);            
+            ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.StopTransfer);
             if (timeUntilExplode > 0)
             {
                 timeUntilExplode -= Time.deltaTime;
@@ -79,8 +80,8 @@ public class TransferEnergyFromWorld : MonoBehaviour
                 timeUntilExplode = 0;
                 timerOn = false;
                 explodeTimerOn = false;
-                ExplodeTimer = true;                
-                
+                ExplodeTimer = true;
+
                 //ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
                 if (ptsScript)
                 {
@@ -96,7 +97,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
         if (ExplodeTimer)
         {
             ParticleTranferState ptsScript = hero.gameObject.GetComponentInChildren<ParticleTranferState>();
-            if(timeUntilBlastOff > 0)
+            if (timeUntilBlastOff > 0)
             {
                 timeUntilBlastOff -= Time.deltaTime;
             }
@@ -112,11 +113,11 @@ public class TransferEnergyFromWorld : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collided with "+ other.gameObject.name);
+        Debug.Log("Collided with " + other.gameObject.name);
         ParticleTranferState ptsScript = other.gameObject.GetComponentInChildren<ParticleTranferState>();
-        if(ptsScript)
+        if (ptsScript)
         {
             ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.StartTransfer);
             timerOn = true;
@@ -131,4 +132,5 @@ public class TransferEnergyFromWorld : MonoBehaviour
             Debug.LogWarning("ParticleTransferState not found on player");
         }
     }
+
 }
