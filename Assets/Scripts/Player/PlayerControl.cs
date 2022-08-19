@@ -14,17 +14,14 @@ public class PlayerControl : MonoBehaviour
     public float resetTime;
     private float attackTimer;
     private float chargeTimer;
-    private float swingPercentComplete;
-    private float chargePercentComplete;
-    private float resetPercentComplete;
+    private float percentComplete;
     public float chargeSpeed;
     public float swingSpeed;
     public float resetSpeed;
     bool startAttackTimer;
     bool startChargeTimer;
-    bool swingRunning;
-    bool chargeRunning;
-    bool resetRunning;
+    bool running;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,16 +29,12 @@ public class PlayerControl : MonoBehaviour
         enemyMask = LayerMask.GetMask("Enemy");
         attackTimer = 0;
         chargeTimer = 0;
-        swingPercentComplete = 0;
-        chargePercentComplete = 0;
-        resetPercentComplete = 0;
+        percentComplete = 0;
         startAttackTimer = false;
         startChargeTimer = false;
-        swingRunning = false;
-        chargeRunning = false;
-        // startRotationQ = Quaternion.Euler(startRotation);
+        running = false;
+       // startRotationQ = Quaternion.Euler(startRotation);
         //endRotationQ   = Quaternion.Euler(endRotation);
-        resetRunning = false;
     }
 
     // Update is called once per frame
@@ -63,7 +56,7 @@ public class PlayerControl : MonoBehaviour
             chargeTimer += Time.deltaTime;
         }
 
-        if (chargeTimer >= 0.3 && swingRunning == false)
+        if (chargeTimer >= 0.3 && running == false)
         {
             startChargeTimer = false;
             chargeTimer = 0;
@@ -78,7 +71,7 @@ public class PlayerControl : MonoBehaviour
 
             startChargeTimer = true;
 
-            if (chargeRunning == false)
+            if (running == false)
             {
                 StartCoroutine(Charge());
             }
@@ -93,7 +86,7 @@ public class PlayerControl : MonoBehaviour
         }
 
 
-        if (attackTimer >= 0.2 && resetRunning == false)
+        if (attackTimer >= 0.2 && running == false)
         {
             StartCoroutine(ResetSword());
             attackTimer = 0;
@@ -102,21 +95,21 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator Charge()
     {
-        chargeRunning = true;
+        running = true;
 
         do
         {
-            sword.transform.localPosition = Vector3.Lerp(startPosition.localPosition, chargePosition.localPosition, chargePercentComplete);
+            sword.transform.localPosition = Vector3.Lerp(startPosition.localPosition, chargePosition.localPosition, percentComplete);
             //sword.transform.localRotation = Quaternion.Slerp(startPosition.transform.localRotation, chargePosition.localRotation, chargePercentComplete);
-            chargePercentComplete += (Time.deltaTime / chargeTime * chargeSpeed);
+            percentComplete += (Time.deltaTime / chargeTime * chargeSpeed);
 
             yield return null;
 
-        } while (chargePercentComplete < 1.0);
+        } while (percentComplete < 1.0);
 
 
-        chargeRunning = false;
-        chargePercentComplete = 0;
+        running = false;
+        percentComplete = 0;
 
     }
 
@@ -124,43 +117,41 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator SwingSword()
     {
-        swingRunning = true;
+        running = true;
 
         do
         {
-            sword.transform.localPosition = Vector3.Lerp(chargePosition.localPosition, endPosition.localPosition, swingPercentComplete);
+            sword.transform.localPosition = Vector3.Lerp(chargePosition.localPosition, endPosition.localPosition, percentComplete);
             //sword.transform.localRotation = Quaternion.Slerp(chargePosition.localRotation, endPosition.localRotation, swingPercentComplete);
-            swingPercentComplete += (Time.deltaTime / swingTime * swingSpeed);
+            percentComplete += (Time.deltaTime / swingTime * swingSpeed);
 
 
             yield return null;
 
-        } while (swingPercentComplete < 1.0);
+        } while (percentComplete < 1.0);
 
-        swingPercentComplete = 0;
-        swingRunning = false;
+        percentComplete = 0;
+        running = false;
         startAttackTimer = true;
     }
 
 
     IEnumerator ResetSword()
     {
-        resetRunning = true;
+        running = true;
 
         do
         {
-            sword.transform.localPosition = Vector3.Lerp(endPosition.localPosition, startPosition.localPosition, resetPercentComplete);
+            sword.transform.localPosition = Vector3.Lerp(endPosition.localPosition, startPosition.localPosition, percentComplete);
             //sword.transform.localRotation = Quaternion.Slerp(endPosition.localRotation, startPosition.localRotation, swingPercentComplete);
-            resetPercentComplete += (Time.deltaTime / resetTime * resetSpeed);
+            percentComplete += (Time.deltaTime / resetTime * resetSpeed);
             yield return null;
 
-        } while (resetPercentComplete < 1.0);
+        } while (percentComplete < 1.0);
 
 
-        resetPercentComplete = 0;
+        percentComplete = 0;
         startAttackTimer = false;
-        resetRunning = false;
+        running = false;
     }
-
-
 }
