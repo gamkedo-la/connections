@@ -26,7 +26,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
         hero = GameObject.Find("Third Person Player/Particle Transfer Manager");
         ParticleTranferState ptsScript = hero.GetComponentInChildren<ParticleTranferState>();
 
-        yellowOrbitingMotes = GameObject.Find("Third Person Player/GFX/YellowOrbiting Motes");
+        yellowOrbitingMotes = GameObject.Find("Third Person Player/Rising Animator/GFX/YellowOrbiting Motes");
         yellowOrbitingMotes.SetActive(false);
 
         explosion = GameObject.Find("Third Person Player/Explosion");
