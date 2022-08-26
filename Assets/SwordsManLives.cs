@@ -8,6 +8,8 @@ public class SwordsManLives : MonoBehaviour
     public GameObject Sword;
     public GameObject Swordsman;
     public GameObject PlayerBlue;
+    public GameObject Ambient_Loc;
+    public GameObject BlueSwordsman_Loc;
     public AudioSource Ambient;
     public AudioSource BlueSwordsman;
     bool Ambient_Play;
@@ -18,12 +20,13 @@ public class SwordsManLives : MonoBehaviour
         Sword.SetActive(false);
         PlayerBlue.SetActive(false);
 
-        Ambient = GetComponent<AudioSource>();
-        Ambient.Play(0);
-        Ambient_Play = true;
+        Ambient_Loc = GameObject.Find("Audio/Ambient Audio");
+        Ambient_Loc.GetComponent<AudioSource>();
+        Ambient_Play = false;
 
-        BlueSwordsman_Play = false;
-        BlueSwordsman = GetComponent<AudioSource>();
+        BlueSwordsman_Loc = GameObject.Find("Audio/BlueSwordsman Audio");
+        BlueSwordsman_Loc.GetComponent<AudioSource>();
+        BlueSwordsman_Play = false;        
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,9 +37,10 @@ public class SwordsManLives : MonoBehaviour
             DyingSwordsman.SetActive(false);
             Swordsman.SetActive(true);
             PlayerBlue.SetActive(true);
-            Ambient_Play = false;
-            if(Ambient_Play == false)
+            Ambient_Play = true;
+            if(Ambient_Play == true)
             {
+                Ambient.Play(0);
                 Ambient.Stop();
                 BlueSwordsman_Play = true;
                 BlueSwordsman.Play(0);
