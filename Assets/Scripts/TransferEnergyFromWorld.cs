@@ -19,6 +19,9 @@ public class TransferEnergyFromWorld : MonoBehaviour
     public string explosionVFXString;
     public bool ExplodeTimer;
     public float timeUntilBlastOff;
+    public GameObject Swordsman;
+    public GameObject SwordsmansTrigger;
+    public GameObject SwordsmanDying;
 
 
     void Start()
@@ -35,6 +38,9 @@ public class TransferEnergyFromWorld : MonoBehaviour
         explosionVFXString = "force";
         explosionVFX.SetInt(explosionVFXString, 1);
         //Debug.Log(explosionVFX);
+        Swordsman.SetActive(false);
+        SwordsmansTrigger.SetActive(false);
+        SwordsmanDying.SetActive(false);
     }
     void Update()
     {
@@ -75,6 +81,10 @@ public class TransferEnergyFromWorld : MonoBehaviour
             else
             {
                 Debug.Log("Time is Up for Explode!");
+                //Turn on Trigger and Blue Swordsman
+                SwordsmanDying.SetActive(true);
+                SwordsmansTrigger.SetActive(true);
+
                 ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastGather);
                 explosionVFX.SetInt(explosionVFXString, -4);
                 timeUntilExplode = 0;
