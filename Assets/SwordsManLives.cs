@@ -7,10 +7,12 @@ public class SwordsManLives : MonoBehaviour
     public GameObject DyingSwordsman;
     public GameObject Sword;
     public GameObject Swordsman;
+    public GameObject PlayerBlue;
 
     void Start()
     {
         Sword.SetActive(false);
+        PlayerBlue.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -20,6 +22,7 @@ public class SwordsManLives : MonoBehaviour
             Sword.SetActive(true);
             DyingSwordsman.SetActive(false);
             Swordsman.SetActive(true);
+            PlayerBlue.SetActive(true);
         }
     }
 }
