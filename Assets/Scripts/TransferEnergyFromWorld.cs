@@ -24,6 +24,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
     public GameObject SwordsmanDying;
 
 
+
     void Start()
     {
         hero = GameObject.Find("Third Person Player/Particle Transfer Manager");
