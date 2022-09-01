@@ -41,9 +41,9 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
 
-        startPosition.rotation = sword.transform.rotation;
-        endPosition.rotation = sword.transform.rotation;
-        chargePosition.rotation = sword.transform.rotation;
+       // startPosition.rotation = sword.transform.rotation;
+        //endPosition.rotation = sword.transform.rotation;
+        //chargePosition.rotation = sword.transform.rotation;
 
 
         if (startAttackTimer == true)
@@ -100,7 +100,7 @@ public class PlayerControl : MonoBehaviour
         do
         {
             sword.transform.localPosition = Vector3.Lerp(startPosition.localPosition, chargePosition.localPosition, percentComplete);
-            //sword.transform.localRotation = Quaternion.Slerp(startPosition.transform.localRotation, chargePosition.localRotation, chargePercentComplete);
+            sword.transform.localRotation = Quaternion.Slerp(startPosition.transform.localRotation, chargePosition.localRotation, percentComplete);
             percentComplete += (Time.deltaTime / chargeTime * chargeSpeed);
 
             yield return null;
@@ -122,7 +122,7 @@ public class PlayerControl : MonoBehaviour
         do
         {
             sword.transform.localPosition = Vector3.Lerp(chargePosition.localPosition, endPosition.localPosition, percentComplete);
-            //sword.transform.localRotation = Quaternion.Slerp(chargePosition.localRotation, endPosition.localRotation, swingPercentComplete);
+            sword.transform.localRotation = Quaternion.Slerp(chargePosition.localRotation, endPosition.localRotation, percentComplete);
             percentComplete += (Time.deltaTime / swingTime * swingSpeed);
 
 
@@ -143,7 +143,7 @@ public class PlayerControl : MonoBehaviour
         do
         {
             sword.transform.localPosition = Vector3.Lerp(endPosition.localPosition, startPosition.localPosition, percentComplete);
-            //sword.transform.localRotation = Quaternion.Slerp(endPosition.localRotation, startPosition.localRotation, swingPercentComplete);
+            sword.transform.localRotation = Quaternion.Slerp(endPosition.localRotation, startPosition.localRotation, percentComplete);
             percentComplete += (Time.deltaTime / resetTime * resetSpeed);
             yield return null;
 
