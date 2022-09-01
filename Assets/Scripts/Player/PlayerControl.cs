@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     bool startAttackTimer;
     bool startChargeTimer;
     bool running;
+    bool alreadySwinging;
     
 
     // Start is called before the first frame update
@@ -33,6 +34,7 @@ public class PlayerControl : MonoBehaviour
         startAttackTimer = false;
         startChargeTimer = false;
         running = false;
+        alreadySwinging = false;
        // startRotationQ = Quaternion.Euler(startRotation);
         //endRotationQ   = Quaternion.Euler(endRotation);
     }
@@ -64,12 +66,13 @@ public class PlayerControl : MonoBehaviour
         }
 
 
-
-        if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0) && alreadySwinging == false)
         {
             Debug.Log("Attack");
 
             startChargeTimer = true;
+            alreadySwinging = true;
 
             if (running == false)
             {
@@ -153,5 +156,6 @@ public class PlayerControl : MonoBehaviour
         percentComplete = 0;
         startAttackTimer = false;
         running = false;
+        alreadySwinging = false;
     }
 }
