@@ -14,6 +14,7 @@ public class SwordsManLives : MonoBehaviour
     public AudioSource BlueSwordsman;
     bool Ambient_Play;
     bool BlueSwordsman_Play;
+    private AudioSource[] allAudioSources;
 
     void Start()
     {
@@ -33,7 +34,12 @@ public class SwordsManLives : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Sword.SetActive(true);
+            allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+            foreach (AudioSource audioS in allAudioSources)
+            {
+                audioS.Stop();
+            }
+            Sword.SetActive(true); 
             DyingSwordsman.SetActive(false);
             Swordsman.SetActive(true);
             PlayerBlue.SetActive(true);
