@@ -23,6 +23,10 @@ public class TransferEnergyFromWorld : MonoBehaviour
     public GameObject SwordsmansTrigger;
     public GameObject SwordsmanDying;
     public GameObject EnemyBlackness;
+    public GameObject StraightDeadTrees1;
+    public GameObject StraightDeadTrees2;
+    public GameObject LivingTrees1;
+    public GameObject LivingTrees2;
 
 
 
@@ -45,6 +49,10 @@ public class TransferEnergyFromWorld : MonoBehaviour
         SwordsmanDying.SetActive(false);
 
         EnemyBlackness.SetActive(true);
+        StraightDeadTrees1.SetActive(true);
+        StraightDeadTrees2.SetActive(true);
+        LivingTrees1.SetActive(false);
+        LivingTrees2.SetActive(false);
     }
     void Update()
     {
@@ -122,6 +130,10 @@ public class TransferEnergyFromWorld : MonoBehaviour
                 {
                     ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastExplode);
                     EnemyBlackness.SetActive(false);
+                    StraightDeadTrees1.SetActive(false);
+                    StraightDeadTrees2.SetActive(false);
+                    LivingTrees1.SetActive(true);
+                    LivingTrees2.SetActive(true);
                 }
             }
 

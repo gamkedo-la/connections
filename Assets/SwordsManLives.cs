@@ -16,6 +16,7 @@ public class SwordsManLives : MonoBehaviour
     bool BlueSwordsman_Play;
     private AudioSource[] allAudioSources;
 
+
     void Start()
     {
         Sword.SetActive(false);
