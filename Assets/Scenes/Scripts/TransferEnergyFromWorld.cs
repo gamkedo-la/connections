@@ -22,6 +22,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
     public GameObject Swordsman;
     public GameObject SwordsmansTrigger;
     public GameObject SwordsmanDying;
+    public GameObject EnemyBlackness;
 
 
 
@@ -42,6 +43,8 @@ public class TransferEnergyFromWorld : MonoBehaviour
         Swordsman.SetActive(false);
         SwordsmansTrigger.SetActive(false);
         SwordsmanDying.SetActive(false);
+
+        EnemyBlackness.SetActive(true);
     }
     void Update()
     {
@@ -118,6 +121,7 @@ public class TransferEnergyFromWorld : MonoBehaviour
                 if (ptsScript)
                 {
                     ptsScript.ChangeStateTo(ParticleTranferState.TransferMode.BlastExplode);
+                    EnemyBlackness.SetActive(false);
                 }
             }
 
