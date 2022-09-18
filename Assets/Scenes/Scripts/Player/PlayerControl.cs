@@ -79,7 +79,7 @@ public class PlayerControl : MonoBehaviour
                 StartCoroutine(Charge());
             }
 
-            Collider[] targets = Physics.OverlapSphere(transform.position + transform.forward * 1.0f, 1.5f, enemyMask);
+            Collider[] targets = Physics.OverlapSphere(transform.position + transform.forward * 5.0f, 4.0f, enemyMask);
             foreach (Collider eachTarget in targets)
             {
                 Debug.Log("Hit: " + eachTarget.gameObject.name);
